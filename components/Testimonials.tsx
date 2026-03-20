@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const testimonials = [
   {
@@ -24,9 +24,30 @@ const testimonials = [
     name: "Ana Paula Oliveira",
     role: "Gerente Geral — Mercado Santa Rosa",
     initials: "AO",
-    img: "/ana.png",
+    img: "/Ana.png",
   },
 ];
+
+function Avatar({ img, name, initials }: { img: string; name: string; initials: string }) {
+  const [failed, setFailed] = useState(false);
+  return (
+    <div
+      className="w-10 h-10 rounded-full overflow-hidden flex items-center justify-center text-sm font-bold text-white flex-shrink-0"
+      style={{ background: "linear-gradient(135deg,var(--accent),var(--accent2))" }}
+    >
+      {failed ? (
+        <span>{initials}</span>
+      ) : (
+        <img
+          src={img}
+          alt={name}
+          className="w-full h-full object-cover"
+          onError={() => setFailed(true)}
+        />
+      )}
+    </div>
+  );
+}
 
 export function Testimonials() {
   const ref = useRef<HTMLDivElement>(null);
@@ -76,15 +97,7 @@ export function Testimonials() {
               </p>
 
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full overflow-hidden flex items-center justify-center text-sm font-bold text-white flex-shrink-0"
-                  style={{ background: "linear-gradient(135deg,var(--accent),var(--accent2))" }}>
-                  <img
-                    src={t.img} alt={t.initials}
-                    className="w-full h-full object-cover"
-                    onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
-                  />
-                  <span className="absolute">{t.initials}</span>
-                </div>
+                <Avatar img={t.img} name={t.name} initials={t.initials} />
                 <div>
                   <div className="text-sm font-bold" style={{ color: "var(--txt)" }}>{t.name}</div>
                   <div className="text-xs" style={{ color: "var(--txt3)" }}>{t.role}</div>

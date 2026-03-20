@@ -138,7 +138,7 @@ export function Pricing() {
             Descontos por período
           </h3>
           <p className="text-xs text-center mb-6" style={{ color: "var(--txt3)" }}>
-            Economize mais comprometendo-se por mais tempo
+            Economize mais utilizando por mais tempo
           </p>
           <div className="grid grid-cols-3 gap-4">
             {[

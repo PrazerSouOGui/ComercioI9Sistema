@@ -74,9 +74,9 @@ export function Footer() {
               {[
                 { label: "WhatsApp",  href: "https://wa.me/5517991845032" },
                 { label: "E-mail",    href: "mailto:contato@softwarei9.com.br" },
-                { label: "Instagram", href: "https://instagram.com/comercioi9sistema" },
-                { label: "Facebook",  href: "https://facebook.com/comercioi9sistema" },
-                { label: "YouTube",   href: "https://youtube.com/@comercioi9sistema" },
+                { label: "Instagram", href: "https://instagram.com/softwarei9" },
+                { label: "Facebook",  href: "https://facebook.com/softwarei9" },
+                { label: "YouTube",   href: "https://youtube.com/@softwarei9" },
               ].map((l) => (
                 <li key={l.label}>
                   <a href={l.href}
