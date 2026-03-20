@@ -16,7 +16,7 @@ const testimonials = [
     name: "Roberto Figueiredo",
     role: "Diretor Comercial — Distribuidora RF",
     initials: "RF",
-    img: "/roberto.png",
+    img: "/Roberto.png",
   },
   {
     stars: 5,

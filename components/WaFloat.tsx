@@ -13,27 +13,26 @@ export function WaFloat() {
     <div className="fixed bottom-7 right-7 z-50 flex items-end gap-3">
       {/* Popup */}
       <div
-        className="rounded-2xl p-4 max-w-[200px] transition-all duration-300"
+        className="rounded-2xl p-4 max-w-[210px] transition-all duration-300"
         style={{
           opacity: open ? 1 : 0,
           transform: open ? "translateY(0) scale(1)" : "translateY(10px) scale(0.94)",
           pointerEvents: open ? "all" : "none",
-          background: "var(--wa-popup-bg, rgba(180,188,205,0.97))",
-          backdropFilter: "blur(16px) saturate(1.5)",
-          WebkitBackdropFilter: "blur(16px) saturate(1.5)",
-          border: "1px solid var(--wa-popup-bdr, rgba(140,150,170,0.5))",
-          boxShadow: "0 4px 24px rgba(0,0,0,0.18)",
+          background: "#1a2030",
+          border: "1px solid rgba(255,255,255,0.10)",
+          boxShadow: "0 8px 32px rgba(0,0,0,0.45)",
+          userSelect: "none",
         }}
       >
-        <p className="text-xs font-bold mb-1.5" style={{ color: "var(--txt)" }}>
+        <p className="text-xs font-bold mb-2" style={{ color: "rgba(255,255,255,0.7)" }}>
           Fale pelo WhatsApp!
         </p>
         <a
           href="https://wa.me/5517991845032"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-sm font-bold"
-          style={{ color: "#22c55e" }}
+          className="text-base font-extrabold"
+          style={{ color: "#4ade80", letterSpacing: "0.01em" }}
         >
           (17) 99184-5032
         </a>

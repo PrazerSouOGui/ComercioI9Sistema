@@ -36,13 +36,21 @@ export default function Home() {
 
         <StatsBar />
 
-        <div ref={featuresRef}>
+        <div id="features" ref={featuresRef}>
           <Features />
         </div>
 
-        <Segments />
-        <WhyI9 />
-        <Testimonials />
+        <div id="segments">
+          <Segments />
+        </div>
+
+        <div id="whyi9">
+          <WhyI9 />
+        </div>
+
+        <div id="testimonials">
+          <Testimonials />
+        </div>
 
         <section className="py-20 px-6 text-center"
           style={{ background: "var(--bg)", borderTop: "1px solid var(--bdr-s)" }}>
@@ -64,7 +72,7 @@ export default function Home() {
               boxShadow: "0 4px 24px rgba(99,102,241,0.42)",
             }}
           >
-            Ver Planos e Preços
+            Ver planos e preços
             <svg className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1"
               fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
@@ -72,7 +80,7 @@ export default function Home() {
           </button>
         </section>
 
-        <div ref={pricingRef}>
+        <div id="pricing" ref={pricingRef}>
           <Pricing />
         </div>
       </main>
