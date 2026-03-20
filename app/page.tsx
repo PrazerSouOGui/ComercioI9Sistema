@@ -26,7 +26,7 @@ export default function Home() {
 
   return (
     <>
-      <Navbar onScrollToPricing={scrollToPricing} />
+      <Navbar onScrollToPricing={scrollToPricing} onScrollToFeatures={scrollToFeatures} />
 
       <main>
         <Hero
@@ -36,7 +36,6 @@ export default function Home() {
 
         <StatsBar />
 
-        {/* anchor ref on the wrapper div */}
         <div ref={featuresRef}>
           <Features />
         </div>
@@ -45,7 +44,6 @@ export default function Home() {
         <WhyI9 />
         <Testimonials />
 
-        {/* CTA band before pricing */}
         <section className="py-20 px-6 text-center"
           style={{ background: "var(--bg)", borderTop: "1px solid var(--bdr-s)" }}>
           <span className="inline-block text-[10px] font-bold tracking-[1.4px] uppercase px-3 py-1 rounded-full mb-4"
@@ -74,7 +72,6 @@ export default function Home() {
           </button>
         </section>
 
-        {/* Pricing anchor */}
         <div ref={pricingRef}>
           <Pricing />
         </div>
