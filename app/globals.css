@@ -33,6 +33,10 @@
   --tag-bg:    rgba(36,89,232,0.1);
   --tag-bdr:   rgba(36,89,232,0.22);
   --tag-txt:   #1a42cc;
+
+  /* WaFloat popup */
+  --wa-popup-bg:  rgba(165,174,192,0.97);
+  --wa-popup-bdr: rgba(120,132,155,0.6);
 }
 
 .dark {

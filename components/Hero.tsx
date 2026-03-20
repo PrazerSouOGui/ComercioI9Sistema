@@ -53,13 +53,13 @@ export function Hero({ onScrollToPricing, onScrollToFeatures }: HeroProps) {
         >
           Gerencie sua<br />
           empresa com inteligencia{" "} <br />
-          <span className="grad-text">Inove</span>
+          <span className="grad-text">inove</span>
         </h1>
 
         <p className="text-lg text-white/55 max-w-lg mx-auto leading-relaxed mb-10
           animate-[fadeUp_.55s_ease_.32s_both]"
         >
-          O I9 une estoque, financeiro, fiscal e vendas em um sistema que roda em rede dentro da sua empresa — seguro, rápido e sem dependência de nuvem.
+          O i9 une estoque, financeiro, fiscal e vendas em um sistema que roda em rede dentro da sua empresa — seguro, rápido e sem dependência de nuvem.
         </p>
 
         {/* THE BUTTONS */}
@@ -72,7 +72,7 @@ export function Hero({ onScrollToPricing, onScrollToFeatures }: HeroProps) {
               boxShadow: "0 4px 24px rgba(99,102,241,0.45), 0 1px 0 rgba(255,255,255,0.22) inset",
             }}
           >
-            Conheça os Planos
+            Conheça os planos
             <svg className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1"
               fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
@@ -87,7 +87,7 @@ export function Hero({ onScrollToPricing, onScrollToFeatures }: HeroProps) {
               border: "1px solid rgba(255,255,255,0.12)",
             }}
           >
-            Ver Recursos
+            Ver recursos
           </button>
         </div>
 

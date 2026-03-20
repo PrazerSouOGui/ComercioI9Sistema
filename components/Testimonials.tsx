@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 const testimonials = [
   {
     stars: 5,
-    text: "O I9 transformou completamente a nossa loja. Controlamos estoque, vendas e emitimos notas fiscais com muito mais facilidade. O suporte é excelente!",
+    text: "O i9 transformou completamente a nossa loja. Controlamos estoque, vendas e emitimos notas fiscais com muito mais facilidade. O suporte é excelente!",
     name: "Maria Clara Santos",
     role: "Proprietária — Casa de Rações Pata Amiga",
     initials: "MC",
@@ -12,7 +12,7 @@ const testimonials = [
   },
   {
     stars: 5,
-    text: "Usamos o I9 há 3 anos e não trocamos por nada. Sistema completo, funciona em rede perfeitamente e nossos dados ficam seguros no nosso próprio servidor.",
+    text: "Usamos o i9 há 3 anos e não trocamos por nada. Sistema completo, funciona em rede perfeitamente e nossos dados ficam seguros no nosso próprio servidor.",
     name: "Roberto Figueiredo",
     role: "Diretor Comercial — Distribuidora RF",
     initials: "RF",
@@ -20,7 +20,7 @@ const testimonials = [
   },
   {
     stars: 5,
-    text: "Emissão de Nota e Cupom fiscal ficou simples com o I9. O sistema é intuitivo e os relatórios nos ajudam muito nas decisões. Melhor investimento que fizemos!",
+    text: "Emissão de Nota e Cupom fiscal ficou simples com o i9. O sistema é intuitivo e os relatórios nos ajudam muito nas decisões. Melhor investimento que fizemos!",
     name: "Ana Paula Oliveira",
     role: "Gerente Geral — Mercado Santa Rosa",
     initials: "AO",
@@ -52,7 +52,7 @@ export function Testimonials() {
             Quem usa, recomenda
           </h2>
           <p className="text-base max-w-sm mx-auto" style={{ color: "var(--txt3)" }}>
-            Empresas que transformaram sua gestão com o I9.
+            Empresas que transformaram sua gestão com o i9.
           </p>
         </div>
 

@@ -9,6 +9,9 @@ interface NavProps {
 export function Navbar({ onScrollToPricing, onScrollToFeatures }: NavProps) {
   const [scrolled, setScrolled] = useState(false);
   const [dark, setDark] = useState(false);
+  // false = "Conheça o sistema" (estado inicial)
+  // true  = "Conheça os planos" (após primeiro clique)
+  const [showPlanos, setShowPlanos] = useState(false);
 
   useEffect(() => {
     const saved = localStorage.getItem("i9-theme");
@@ -25,28 +28,43 @@ export function Navbar({ onScrollToPricing, onScrollToFeatures }: NavProps) {
     localStorage.setItem("i9-theme", next ? "dark" : "light");
   }
 
+  function handleMainBtn() {
+    if (!showPlanos) {
+      // Primeiro clique: rola para o sistema e troca label
+      onScrollToFeatures();
+      setShowPlanos(true);
+    } else {
+      // Segundo clique: rola para planos e volta ao label inicial
+      onScrollToPricing();
+      setShowPlanos(false);
+    }
+  }
+
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 h-16 flex items-center justify-between px-8 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 h-14 sm:h-16 flex items-center justify-between px-4 sm:px-8 transition-all duration-300 ${
         scrolled ? "glass border-b border-white/10 shadow-sm" : "bg-transparent"
       }`}
+      style={{ userSelect: "none" }}
     >
-      {/* Logo — somente ícone */}
+      {/* Logo */}
       <div className="flex items-center">
         <img
           src="/i9icone.png"
           alt="i9 logo"
-          width={38}
-          height={38}
+          width={34}
+          height={34}
+          className="sm:w-[38px] sm:h-[38px]"
           style={{ objectFit: "contain" }}
         />
       </div>
 
       <div className="flex items-center gap-2">
+        {/* Theme toggle */}
         <button
           onClick={toggleTheme}
           title="Alternar tema"
-          className="w-9 h-9 rounded-lg flex items-center justify-center transition-all duration-150"
+          className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg flex items-center justify-center transition-all duration-150"
           style={{
             background: "rgba(59, 58, 58, 0.49)",
             border: "1px solid rgba(37, 37, 37, 0.12)",
@@ -68,15 +86,16 @@ export function Navbar({ onScrollToPricing, onScrollToFeatures }: NavProps) {
           )}
         </button>
 
+        {/* Main CTA — alterna entre "Conheça o sistema" e "Conheça os planos" */}
         <button
-          onClick={onScrollToFeatures}
-          className="px-4 py-2 rounded-lg text-sm font-semibold text-white transition-all duration-150 hover:brightness-110 hover:-translate-y-px"
+          onClick={handleMainBtn}
+          className="px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold text-white transition-all duration-200 hover:brightness-110 hover:-translate-y-px whitespace-nowrap"
           style={{
             background: "var(--accent)",
             boxShadow: "0 2px 12px rgba(36,89,232,0.4)",
           }}
         >
-          Conheça o sistema
+          {showPlanos ? "Conheça os planos" : "Conheça o sistema"}
         </button>
       </div>
     </nav>

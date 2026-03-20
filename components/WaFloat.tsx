@@ -13,11 +13,16 @@ export function WaFloat() {
     <div className="fixed bottom-7 right-7 z-50 flex items-end gap-3">
       {/* Popup */}
       <div
-        className="glass-card rounded-2xl p-4 max-w-[200px] transition-all duration-300"
+        className="rounded-2xl p-4 max-w-[200px] transition-all duration-300"
         style={{
           opacity: open ? 1 : 0,
           transform: open ? "translateY(0) scale(1)" : "translateY(10px) scale(0.94)",
           pointerEvents: open ? "all" : "none",
+          background: "var(--wa-popup-bg, rgba(180,188,205,0.97))",
+          backdropFilter: "blur(16px) saturate(1.5)",
+          WebkitBackdropFilter: "blur(16px) saturate(1.5)",
+          border: "1px solid var(--wa-popup-bdr, rgba(140,150,170,0.5))",
+          boxShadow: "0 4px 24px rgba(0,0,0,0.18)",
         }}
       >
         <p className="text-xs font-bold mb-1.5" style={{ color: "var(--txt)" }}>

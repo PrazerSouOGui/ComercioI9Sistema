@@ -37,7 +37,7 @@ export function Segments() {
             Feito para o seu negócio
           </h2>
           <p className="text-base max-w-sm mx-auto" style={{ color: "var(--txt3)" }}>
-            Seja qual for o segmento, o I9 se adapta à sua realidade.
+            Seja qual for o segmento, o i9 se adapta à sua realidade.
           </p>
         </div>
 
