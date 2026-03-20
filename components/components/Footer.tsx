@@ -14,7 +14,7 @@ export function Footer() {
             </p>
             <div className="space-y-2 mb-5">
               {[
-                { icon: "M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z", text: "comercioi9sistema@gmail.com" },
+                { icon: "M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z", text: "contato@softwarei9.com.br" },
                 { icon: "M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z", text: "(17) 99184-5032" },
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-2">
@@ -25,27 +25,25 @@ export function Footer() {
                 </div>
               ))}
             </div>
-            {/* Socials */}
-            <div className="flex gap-2">
+            {/* Socials — somente texto, sem ícones */}
+            <div className="flex flex-wrap gap-x-4 gap-y-2">
               {[
-                { href: "https://instagram.com/comercioi9sistema", title: "Instagram", d: "M22 2a1 1 0 000-2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" },
-                { href: "https://facebook.com/comercioi9sistema", title: "Facebook", d: "M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" },
-                { href: "https://youtube.com/@comercioi9sistema", title: "YouTube", d: "M22.54 6.42a2.78 2.78 0 00-1.95-1.97C18.88 4 12 4 12 4s-6.88 0-8.59.45A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.95 1.97C5.12 20 12 20 12 20s6.88 0 8.59-.45a2.78 2.78 0 001.95-1.97A29 29 0 0023 12a29 29 0 00-.46-5.58z" },
-                { href: "https://wa.me/5517991845032", title: "WhatsApp", d: "M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" },
+                { href: "https://instagram.com/comercioi9sistema", label: "Instagram" },
+                { href: "https://facebook.com/comercioi9sistema", label: "Facebook" },
+                { href: "https://youtube.com/@comercioi9sistema", label: "YouTube" },
+                { href: "https://wa.me/5517991845032", label: "WhatsApp" },
               ].map((s) => (
-                <a key={s.title} href={s.href} target="_blank" rel="noopener noreferrer" title={s.title}
-                  className="w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-150"
-                  style={{
-                    background: "rgba(255,255,255,0.05)",
-                    border: "1px solid rgba(255,255,255,0.07)",
-                    color: "rgba(255,255,255,0.4)",
-                  }}
-                  onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#fff"; (e.currentTarget as HTMLAnchorElement).style.background = "rgba(255,255,255,0.1)"; }}
-                  onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "rgba(255,255,255,0.4)"; (e.currentTarget as HTMLAnchorElement).style.background = "rgba(255,255,255,0.05)"; }}
+                <a
+                  key={s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs transition-colors duration-150"
+                  style={{ color: "rgba(255,255,255,0.38)" }}
+                  onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#fff"; }}
+                  onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "rgba(255,255,255,0.38)"; }}
                 >
-                  <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d={s.d} />
-                  </svg>
+                  {s.label}
                 </a>
               ))}
             </div>
@@ -74,7 +72,7 @@ export function Footer() {
               title: "Contato",
               links: [
                 { label: "WhatsApp", href: "https://wa.me/5517991845032" },
-                { label: "E-mail", href: "mailto:comercioi9sistema@gmail.com" },
+                { label: "E-mail", href: "mailto:contato@softwarei9.com.br" },
                 { label: "Instagram", href: "https://instagram.com/comercioi9sistema" },
                 { label: "Facebook", href: "https://facebook.com/comercioi9sistema" },
                 { label: "YouTube", href: "https://youtube.com/@comercioi9sistema" },
@@ -110,7 +108,7 @@ export function Footer() {
             © 2026 Comercio i9 — Todos os direitos reservados.
           </p>
           <span className="font-mono text-[10px]" style={{ color: "rgba(255,255,255,0.16)" }}>
-            comercioi9sistema@gmail.com
+            contato@softwarei9.com.br
           </span>
         </div>
       </div>
