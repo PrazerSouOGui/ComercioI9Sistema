@@ -6,7 +6,7 @@ interface NavProps {
   onScrollToFeatures: () => void;
 }
 
-export function Navbar({ onScrollToPricing }: NavProps) {
+export function Navbar({ onScrollToPricing, onScrollToFeatures }: NavProps) {
   const [scrolled, setScrolled] = useState(false);
   const [dark, setDark] = useState(false);
 
@@ -31,13 +31,15 @@ export function Navbar({ onScrollToPricing }: NavProps) {
         scrolled ? "glass border-b border-white/10 shadow-sm" : "bg-transparent"
       }`}
     >
-      <div className="flex items-baseline gap-2">
-        <span className="font-display text-2xl font-extrabold tracking-tight leading-none" style={{ color: "var(--accent)" }}>
-          I9
-        </span>
-        <span className="text-xs font-medium hidden sm:block" style={{ color: "var(--txt3)" }}>
-          Sistema Comercial
-        </span>
+      {/* Logo — somente ícone */}
+      <div className="flex items-center">
+        <img
+          src="/i9icone.png"
+          alt="i9 logo"
+          width={38}
+          height={38}
+          style={{ objectFit: "contain" }}
+        />
       </div>
 
       <div className="flex items-center gap-2">
@@ -67,14 +69,14 @@ export function Navbar({ onScrollToPricing }: NavProps) {
         </button>
 
         <button
-          onClick={onScrollToPricing}
+          onClick={onScrollToFeatures}
           className="px-4 py-2 rounded-lg text-sm font-semibold text-white transition-all duration-150 hover:brightness-110 hover:-translate-y-px"
           style={{
             background: "var(--accent)",
             boxShadow: "0 2px 12px rgba(36,89,232,0.4)",
           }}
         >
-          Conheça os Planos
+          Conheça o sistema
         </button>
       </div>
     </nav>
