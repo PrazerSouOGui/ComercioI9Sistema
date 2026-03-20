@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 
 interface NavProps {
   onScrollToPricing: () => void;
+  onScrollToFeatures: () => void;
 }
 
 export function Navbar({ onScrollToPricing }: NavProps) {
